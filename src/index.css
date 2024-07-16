@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* .custom-swiper .slide-custom {
+  width: 18rem !important;
+} */
+
+@media (max-width: 1024px) {
+  .custom-swiper .slide-custom {
+    width: 16rem !important; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-swiper .slide-custom {
+    width: 14rem !important; /* Adjust width for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 640px) {
+  .custom-swiper .slide-custom {
+    width: 12rem !important; /* Adjust width for mobile devices in landscape mode */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-swiper .slide-custom {
+    width: 100% !important; /* Adjust width for smaller mobile devices */
+    max-width: 18rem !important; /* Set max-width to prevent overflow */
+  }
+}
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #040517;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5734B9;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
