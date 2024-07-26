@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { SiGooglemessages } from "react-icons/si";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_TC.jpg";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
+
+
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  
+
+
+  // const ChangeBg = () =>{
+  //   console.log("Scrolling Value ");
+  //   console.log(window.scrollY);
+  // }
+
+  // window.addEventListener("scroll", ChangeBg);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -79,8 +91,8 @@ const Navbar = () => {
     <div className="flex md:flex-row flex-col bg-[#040517] justify-between items-center px-4 md:px-20 py-4 fixed w-full z-10">
       <div className="flex items-center w-full md:w-auto justify-between">
         <div className="flex items-center">
-          <a href="home" className="flex items-center justify-center">
-          <img src={logo} className="w-10 md:w-20" alt="Logo" />
+          <a href="home" className="flex gap-1 items-center justify-center">
+          <img src={logo} className="md:w-16 w-8 rounded-xl" alt="Logo" />
           <h1 className="font-bold text-2xl text-blue-50">
             ToppersClubs
           </h1>
@@ -108,7 +120,7 @@ const Navbar = () => {
                 <li
                   key={link}
                   onClick={() => handleScroll(link)}
-                  className={`text-white capitalize text-lg font-semibold rounded-md ${
+                  className={`text-white capitalize text-lg font-medium rounded-md ${
                     link === "contact" ? "px-6 md:px-20" : "mx-6"
                   } py-1.5 cursor-pointer transition ease-linear duration-500 ${
                     activeSection === link &&
@@ -119,9 +131,7 @@ const Navbar = () => {
                 >
                   <div className="flex items-center">
                     {link === "ourmentors" ? "Our Mentors" : link}
-                    {link === "contact" && (
-                      <SiGooglemessages className="ml-2" />
-                    )}
+                    {link === "contact" }
                   </div>
                 </li>
               ))}
@@ -134,20 +144,26 @@ const Navbar = () => {
                 <li
                   key={link}
                   onClick={() => handleScroll(link)}
-                  className={`text-white capitalize text-lg font-semibold rounded-md ${
-                    link === "contact" ? "px-6 md:px-20" : "mx-6"
-                  } py-1.5 cursor-pointer transition ease-linear duration-500 ${
+                  className={`text-white capitalize text-lg font-medium tracking-wider rounded-full ${
+                    link === "contact" ? "px-6 border-2 border-indigo-700 rounded-full mx-10  md:px-5" : "mx-6"
+                  } py-1.5 cursor-pointer transition ease-linear duration-200 ${
                     activeSection === link &&
                     link !== "contact"
                       ? "decoration-2 shadow-0_35px_105px_rgba(0,191,255,0.25) transition ease-linear duration-100 underline-offset-4 decoration-solid decoration-sky-500 underline"
                       : "text-white"
-                  } hover:text-gray-400 flex items-center`}
+                  } hover:text-pink-500 flex items-center   `}
                 >
                   <div className="flex items-center">
                     {link === "ourmentors" ? "Our Mentors" : link}
-                    {link === "contact" && (
-                      <SiGooglemessages className="ml-2" />
-                    )}
+                    <div className="bg-white text-slate-900">
+                    {link === "contact" 
+                      // <SiGooglemessages className="ml-2" />
+                    }
+
+                    </div>
+                    {/* {link === "contact" 
+           
+                    } */}
                   </div>
                 </li>
               ))}

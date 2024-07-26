@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+import Home2 from "./pages/Home2";
 import Features from "./pages/Features";
 import Batches from "./pages/Batches";
 import Contact from "./pages/Contact";
@@ -57,9 +57,9 @@ const App = () => {
 
   return (
     <>
-      <div className="">
+      <div className="bg-[#040517]">
         <Navbar />
-        <Home />
+        <Home2 />
         <Features />
         <Mentors/>
         {/* <Mentors_3d /> */}

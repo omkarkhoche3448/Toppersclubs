@@ -5,10 +5,17 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  background-color:#040517;
+}
 
 /* .custom-swiper .slide-custom {
   width: 18rem !important;
 } */
+
+.mySwiper{
+  width: 80%;
+}
 
 @media (max-width: 1024px) {
   .custom-swiper .slide-custom {

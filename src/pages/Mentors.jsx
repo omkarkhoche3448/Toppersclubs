@@ -53,7 +53,6 @@ const data = [
   },
 ];
 
-
 const Mentors = () => {
   const [swiperRef, setSwiperRef] = useState(null);
 
@@ -70,7 +69,8 @@ const Mentors = () => {
   };
 
   return (
-    <div id="ourmentors" className="bg-[#040517] text-blue-50">
+    <div id="ourmentors" className=" text-blue-50">
+ {/* <div className='absolute bottom-10 left-20 w-[250px] h-[250px] bg-indigo-700 bg-opacity-50 rounded-full blur-[90px]'></div> */}
       <div className="md:mx-20 mx-6">
         <h1 className="text-4xl font-semibold space-y-20 py-4 text-center">
           Our Mentors
@@ -105,7 +105,7 @@ const Mentors = () => {
           breakpoints={{
             0: { slidesPerView: 1 },
             768: { slidesPerView: 1 },
-            1024: { slidesPerView: 4 },
+            1024: { slidesPerView: 3 },
           }}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper grab-cursor"

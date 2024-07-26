@@ -48,3 +48,16 @@ export default function App() {
 https://codesandbox.io/p/devbox/swiper-react-manipulation-forked-yxzk5s?file=%2Fsrc%2FApp.jsx%3A53%2C26
 
 
+
+Home .jsx
+
+
+      <h1 className="md:text-6xl text-3xl m-5 pb-6 pt-28 drop-shadow-2xl text-white mx-auto text-center font-semibold">
+      {/* Achieve Excellence */}
+      {/* Achieve NEET Success with Toppers Clubs <br /> */}
+      {/* Ace NEET with Toppers Clubs  <br /> */}
+        <span className="bg-gradient-to-r from-rose-600 to-indigo-700 bg-clip-text text-transparent my-5 ">
+          
+          {/* Your Path to the Top 1%!{" "} */}
+        </span>{" "}
+      </h1>

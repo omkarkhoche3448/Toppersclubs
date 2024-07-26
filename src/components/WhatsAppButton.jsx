@@ -27,7 +27,7 @@ const WhatsAppButton = () => {
         href="https://wa.me/918434124950?text=Hello How can I help you?"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600"
+        className="flex items-center justify-center w-12 h-12 bg-indigo-700 text-white rounded-full shadow-lg hover:bg-green-600"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
