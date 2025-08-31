@@ -1,12 +1,13 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// import img1 from "../assets/mentor_img1.jpeg";
 import img1 from "../assets/mentor_img1.jpeg";
 import img2 from "../assets/mentor_img2.jpeg";
 import img3 from "../assets/mentor_img3.jpg";
-import img4 from "../assets/mentor_img4.jpg";
-import img5 from "../assets/mentor_img5.jpg";
-import img6 from "../assets/mentor_img6.jpg";
+// import img4 from "../assets/mentor_img4.jpg";
+// import img5 from "../assets/mentor_img5.jpg";
+// import img6 from "../assets/mentor_img6.jpg";
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../Variants';
@@ -21,10 +22,10 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 const data = [
     {
-      Name: "Mrinal Kutteri",
+      Name: "Divyansh Sangwar",
       img: img1,
       rank: "AIR 1",
-      info: "Mrinal Kutteri secured AIR 1 in the NEET Exam.",
+      info: "Divyansh secured AIR 1 in the NEET Exam.",
     },
     {
       Name: "Soyeb Aftab",
@@ -38,24 +39,24 @@ const data = [
       rank: "AIR 5",
       info: "Deepak Sahu secured AIR 5 in the NEET Exam.",
     },
-    {
-      Name: "Raj Gajera",
-      img: img5,
-      rank: "AIR 33",
-      info: "Raj Gajera achieved AIR 33 in the NEET Exam.",
-    },
-    {
-      Name: "Sayak Biswas",
-      img: img6,
-      rank: "AIR 44",
-      info: "Sayak Biswas secured AIR 44 in the NEET Exam.",
-    },
-    {
-      Name: "Satwik Godara",
-      img: img4,
-      rank: "AIR 7",
-      info: "Satwik Godara achieved AIR 7 in the NEET Exam.",
-    },
+    // {
+    //   Name: "Raj Gajera",
+    //   img: img5,
+    //   rank: "AIR 33",
+    //   info: "Raj Gajera achieved AIR 33 in the NEET Exam.",
+    // },
+    // {
+    //   Name: "Sayak Biswas",
+    //   img: img6,
+    //   rank: "AIR 44",
+    //   info: "Sayak Biswas secured AIR 44 in the NEET Exam.",
+    // },
+    // {
+    //   Name: "Satwik Godara",
+    //   img: img4,
+    //   rank: "AIR 7",
+    //   info: "Satwik Godara achieved AIR 7 in the NEET Exam.",
+    // },
   ];
   
 
