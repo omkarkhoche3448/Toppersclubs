@@ -4,36 +4,36 @@ import { fadeIn } from '../Variants';
 
 const gold = [
   {
-    title: "Gold 1",
-    disc: "2998 for 1 month",
-    price: "1499 for 1 Month 50% Off",
+    title: "Gold ",
+    disc: "",
+    price: "5999 for 3 month",
     seats: "Limited Seats Available",
-    link: "https://rzp.io/l/jCBcHTAv", // Example link for Gold 1
+    link: "https://rzp.io/l/Lme7vAh", // Example link for Gold 1
   },
-  {
-    title: "Gold 2",
-    disc: "5998 for 3 month",
-    price: "2999 for 3 Month 50% Off",
-    seats: "Limited Seats Available",
-    link: "https://rzp.io/l/j5qrJs6", // Example link for Gold 2
-  },
+  // {
+  //   title: "Gold ",
+  //   disc: "5998 for 3 month",
+  //   price: "2999 for 3 Month 50% Off",
+  //   seats: "Limited Seats Available",
+  //   link: "https://rzp.io/l/j5qrJs6", // Example link for Gold 2
+  // },
 ];
 
 const platinum = [
   {
-    title: "Platinum 1",
-    disc: "7998 for 6 month",
-    price: "3999 for 6 Month 50% Off",
+    title: "Platinum ",
+    disc: "",
+    price: "9999 Till neet 2026",
     seats: "Limited Seats Available",
-    link: "https://rzp.io/l/KOWqArvK", // Example link for Platinum 1
+    link: "https://rzp.io/rzp/DINd1zvp", // Example link for Platinum 1
   },
-  {
-    title: "Platinum 2",
-    disc: "11998 for 12 month",
-    price: "5999 for 12 Months 50% Off",
-    seats: "Limited Seats Available",
-    link: "https://rzp.io/l/Lme7vAh", // Example link for Platinum 2
-  },
+  // {
+  //   title: "Platinum 2",
+  //   disc: "11998 for 12 month",
+  //   price: "5999 for 12 Months 50% Off",
+  //   seats: "Limited Seats Available",
+  //   link: "https://rzp.io/l/Lme7vAh", // Example link for Platinum 2
+  // },
 ];
 
 
@@ -60,35 +60,40 @@ const Batches = () => {
         <p className="text-center text-xl">Accelerate your prep journey with plans as follows:</p>
         <p className="text-center text-xl ">Believe us, it's already the cheapest.</p>
       </motion.div>
-      <div>
-        <div className="gold">
-          <h1 className="text-2xl text-center">Gold Batches</h1>
-          <div className="flex flex-wrap items-center justify-center">
+      <div className="w-full flex flex-col lg:flex-row items-start justify-center gap-10 mt-10">
+        {/* Gold Batches */}
+        <div className="flex-1 w-full max-w-md mx-auto mb-10 lg:mb-0 lg:mx-0">
+          <h1 className="text-3xl text-center font-bold mb-6 text-yellow-400 drop-shadow">Gold Batches</h1>
+          <div className="flex flex-col items-center gap-8">
             {gold.map((g, index) => (
-              <div key={index} className="card flex flex-col gap-3 items-center justify-center text-slate-900 bg-[#FFC100] mb-4 p-10 m-5 rounded-lg">
-                <h2 className="text-2xl font-semibold">{g.title}</h2>
-                <p className="text-sm font-medium"> <s>&#x20B9;{g.disc}  </s> </p>
-                <p className="text-base">&#x20B9;{g.price}</p>
-                <p>({g.seats})</p>
-                <button className="bg-indigo-500 text-white text-base py-1 rounded-lg px-2"><a href={g.link}>Join Now</a></button>
+              <div key={index} className="card w-full max-w-xs flex flex-col gap-4 items-center justify-center text-slate-900 bg-[#FFC100] p-8 rounded-2xl shadow-2xl border border-yellow-300">
+                <h2 className="text-2xl font-bold mb-1">{g.title}</h2>
+                {g.disc && <p className="text-sm font-medium text-gray-700"><s>&#x20B9;{g.disc}</s></p>}
+                <p className="text-lg font-semibold">&#x20B9;{g.price}</p>
+                <p className="text-base font-medium text-gray-800">{g.seats}</p>
+                <a href={g.link} target="_blank" rel="noopener noreferrer" className="w-full mt-2">
+                  <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-base py-2 rounded-lg font-semibold transition">Join Now</button>
+                </a>
               </div>
             ))}
           </div>
         </div>
-        <div className="Platinum">
-        <h1 className="text-2xl text-center">Platinum Batches</h1>
-          <div className="flex flex-wrap items-center justify-center">
+        {/* Platinum Batches */}
+        <div className="flex-1 w-full max-w-md mx-auto lg:mx-0">
+          <h1 className="text-3xl text-center font-bold mb-6 text-slate-300 drop-shadow">Platinum Batches</h1>
+          <div className="flex flex-col items-center gap-8">
             {platinum.map((g, index) => (
-              <div key={index} className="card flex flex-col items-center gap-3 justify-center bg-slate-400 mb-4 p-10 m-5 rounded-lg">
-                <h2 className="text-2xl font-semibold">{g.title}</h2>
-                <p className="text-sm"> <s>&#x20B9;{g.disc} </s> </p>
-                <p className="text-base font-medium">&#x20B9; {g.price}</p>
-                <p>({g.seats})</p>
-                <button className="bg-indigo-500 text-base py-1 px-2 rounded-lg"><a href={g.link}>Join Now</a></button>
+              <div key={index} className="card w-full max-w-xs flex flex-col gap-4 items-center justify-center bg-gradient-to-br from-slate-300 to-slate-400 p-8 rounded-2xl shadow-2xl border border-slate-300">
+                <h2 className="text-2xl font-bold mb-1 text-gray-800">{g.title}</h2>
+                {g.disc && <p className="text-sm font-medium text-gray-600"><s>&#x20B9;{g.disc}</s></p>}
+                <p className="text-lg font-semibold text-gray-900">&#x20B9; {g.price}</p>
+                <p className="text-base font-medium text-gray-800">{g.seats}</p>
+                <a href={g.link} target="_blank" rel="noopener noreferrer" className="w-full mt-2">
+                  <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-base py-2 rounded-lg font-semibold transition">Join Now</button>
+                </a>
               </div>
             ))}
           </div>
-
         </div>
       </div>
       
