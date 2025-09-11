@@ -61,17 +61,17 @@ const Contact = () => {
               </p>
               <p className="text-lg">
                 {" "}
-                <span className="font-semibold">Phone No:</span> +91 8434124950
+                <span className="font-semibold">Phone No:</span> 
               </p>
-              <p className="text-lg">
+              {/* <p className="text-lg">
                 {" "}
                 <span className="font-semibold">Address:</span> AIIMS Delhi
                 Hostel no. 1 , <br /> East New , Delhi - 110029
-              </p>
+              </p> */}
             </div>
           </div>
           <div className="text-center mt-8">
-            <p>© 2024 Toppers Clubs. All rights reserved.</p>
+            <p>© 2025 Toppers Clubs. All rights reserved.</p>
           </div>
         </footer>
       </div>
