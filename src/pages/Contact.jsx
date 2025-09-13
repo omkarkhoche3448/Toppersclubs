@@ -61,7 +61,7 @@ const Contact = () => {
               </p>
               <p className="text-lg">
                 {" "}
-                <span className="font-semibold">Phone No:</span> 
+                <span className="font-semibold">Phone No:</span>{" "}74520 78988
               </p>
               {/* <p className="text-lg">
                 {" "}
