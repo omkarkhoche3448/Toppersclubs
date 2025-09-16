@@ -10,7 +10,8 @@ import { MdClose } from "react-icons/md";
 import Mentors from "./pages/Mentors";
 
 
-import img2 from "./assets/mentor_img2.jpeg";
+// import img2 from "./assets/mentor_img2.jpeg";
+import img2 from "./assets/2025Newbanner.jpg";
 
 const Modal = ({ onClose }) => {
   return (
@@ -25,7 +26,7 @@ const Modal = ({ onClose }) => {
           {/* <h2 className="text-xl font-bold mb-4">Modal Title</h2>
           <p>Modal content goes here...</p> */}
           <img className="w-60 rounded-lg" src={img2} alt="" />
-          <h2 className="md:text-3xl text-2xl font-medium text-center">Get Mentorship From <br /> <span className="font-semibold">Soyeb Aftab</span> <br /> AIR-1</h2>
+          <h2 className="md:text-3xl text-2xl font-medium text-center">Get Mentorship From <br /> <span className="font-semibold">MBBS Toppers</span> <br /> AIR-1 </h2>
           <h3 className="text-lg">On TopperClubs</h3>
           <button onClick={onClose} className="text-xl text-blue-50 px-2 py-1 rounded-lg bg-indigo-500"><a href="#batches">Limited Seats Join Now !</a></button>
 
