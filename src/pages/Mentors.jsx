@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 // import img1 from "../assets/mentor_img1.jpeg";
 import img1 from "../assets/mentor_img1.jpg";
 import img2 from "../assets/mentor_img2.jpeg";
-import img3 from "../assets/mentor_img3.jpg";
+import img3 from "../assets/mentor.png";
 // import img4 from "../assets/mentor_img4.jpg";
 // import img5 from "../assets/mentor_img5.jpg";
 // import img6 from "../assets/mentor_img6.jpg";
@@ -19,19 +19,19 @@ const data = [
   {
     Name: "Divyansh Sangwar",
     img: img1,
-    rank: "AIR 1",
+    rank: "AIR 1 Neet 2024",
     info: "Divyansh secured AIR 1 in the NEET Exam.",
   },
   {
     Name: "Soyeb Aftab",
     img: img2,
-    rank: "AIR 1",
+    rank: "AIR 1 Neet 2020",
     info: "Soyeb Aftab achieved AIR 1 in the NEET Exam.",
   },
   {
     Name: "Deepak Sahu",
     img: img3,
-    rank: "AIR 5",
+    rank: "AIR 5 Neet 2021",
     info: "Deepak Sahu secured AIR 5 in the NEET Exam.",
   },
   // {

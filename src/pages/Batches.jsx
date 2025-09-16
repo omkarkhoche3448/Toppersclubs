@@ -5,7 +5,8 @@ import { fadeIn } from '../Variants';
 const gold = [
   {
     title: "Gold ",
-    disc: "",
+    originalPrice: "11999",
+    disc: "50% OFF Limited Time",
     price: "5999 for 3 month",
     seats: "Limited Seats Available",
     link: "https://rzp.io/l/Lme7vAh", // Example link for Gold 1
@@ -22,7 +23,8 @@ const gold = [
 const platinum = [
   {
     title: "Platinum ",
-    disc: "",
+    originalPrice: "19999",
+    disc: "MEGA DISCOUNT 50% OFF",
     price: "9999 Till neet 2026",
     seats: "Limited Seats Available",
     link: "https://rzp.io/rzp/DINd1zvp", // Example link for Platinum 1
@@ -40,71 +42,124 @@ const platinum = [
 const Batches = () => {
   return (
     <>
-    <div id="batches" className=" text-blue-50 z-10">
-    
-
-    <div className='absolute bottom-15 right-5 w-[250px] h-[350px] bg-gradient-to-tl from-pink-500 to-blue-700 bg-opacity-85 rounded-full md:blur-[70px] blur-[150px]'></div>
-
-
-      <motion.div className="py-10 px-5 z-20"
+    <div id="batches" className="text-blue-50 z-10 py-20 px-4">
+      {/* Header Section */}
+      <motion.div className="max-w-4xl mx-auto text-center mb-16"
        variants={fadeIn("up", 0.02)}
        initial="hidden"
        whileInView={"show"}
        viewport={{ once: false, amount: 0.7 }}
       >
-        <h1 className="text-center text-4xl font-semibold mb-3">We Offer</h1>
-        <p className="text-center text-xl">
-          We provide you very flexible and smooth functioning where you can
-          manage and stretch the duration of your plans as per your choice.
+        <h1 className="text-5xl font-bold mb-6">Choose Your Plan</h1>
+        <p className="text-xl text-gray-300 mb-4">
+          Flexible and affordable plans designed to accelerate your NEET preparation journey.
         </p>
-        <p className="text-center text-xl">Accelerate your prep journey with plans as follows:</p>
-        <p className="text-center text-xl ">Believe us, it's already the cheapest.</p>
+        <p className="text-lg text-yellow-400 font-semibold">Limited time offers - Don't miss out!</p>
       </motion.div>
-      <div className="w-full flex flex-col lg:flex-row items-start justify-center gap-10 mt-10">
-        {/* Gold Batches */}
-        <div className="flex-1 w-full max-w-md mx-auto mb-10 lg:mb-0 lg:mx-0">
-          <h1 className="text-3xl text-center font-bold mb-6 text-yellow-400 drop-shadow">Gold Batches</h1>
-          <div className="flex flex-col items-center gap-8">
-            {gold.map((g, index) => (
-              <div key={index} className="card w-full max-w-xs flex flex-col gap-4 items-center justify-center text-slate-900 bg-[#FFC100] p-8 rounded-2xl shadow-2xl border border-yellow-300">
-                <h2 className="text-2xl font-bold mb-1">{g.title}</h2>
-                {g.disc && <p className="text-sm font-medium text-gray-700"><s>&#x20B9;{g.disc}</s></p>}
-                <p className="text-lg font-semibold">&#x20B9;{g.price}</p>
-                <p className="text-base font-medium text-gray-800">{g.seats}</p>
-                <a href={g.link} target="_blank" rel="noopener noreferrer" className="w-full mt-2">
-                  <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-base py-2 rounded-lg font-semibold transition">Join Now</button>
-                </a>
+
+      {/* Pricing Cards */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        {/* Gold Plan */}
+        <div className="relative">
+          <div className="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden">
+            {/* Discount Badge */}
+            <div className="absolute top-0 right-0 bg-red-500 text-white px-4 py-2 rounded-bl-2xl font-bold text-sm">
+              50% OFF
+            </div>
+            
+            <div className="text-center">
+              {/* Plan Header */}
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">Gold Plan</h3>
+              <div className="mb-6">
+                <span className="text-lg text-red-500 line-through">₹11,999</span>
+                <div className="text-4xl font-bold text-green-600 mt-2">₹5,999</div>
+                <p className="text-gray-600 mt-1">for 3 months</p>
+                <p className="text-sm text-green-600 font-semibold mt-2">Save ₹6,000!</p>
               </div>
-            ))}
+              
+              {/* Features */}
+              <div className="space-y-3 mb-8 text-left">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="text-gray-700">3 Month Access</span>
+                </div>
+              
+              </div>
+              
+              <p className="text-sm text-orange-600 font-semibold mb-6">Limited Seats Available</p>
+              
+              <a href="https://rzp.io/l/Lme7vAh" target="_blank" rel="noopener noreferrer" className="block">
+                <button className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg hover:shadow-xl">
+                  Enroll Now
+                </button>
+              </a>
+            </div>
           </div>
         </div>
-        {/* Platinum Batches */}
-        <div className="flex-1 w-full max-w-md mx-auto lg:mx-0">
-          <h1 className="text-3xl text-center font-bold mb-6 text-slate-300 drop-shadow">Platinum Batches</h1>
-          <div className="flex flex-col items-center gap-8">
-            {platinum.map((g, index) => (
-              <div key={index} className="card w-full max-w-xs flex flex-col gap-4 items-center justify-center bg-gradient-to-br from-slate-300 to-slate-400 p-8 rounded-2xl shadow-2xl border border-slate-300">
-                <h2 className="text-2xl font-bold mb-1 text-gray-800">{g.title}</h2>
-                {g.disc && <p className="text-sm font-medium text-gray-600"><s>&#x20B9;{g.disc}</s></p>}
-                <p className="text-lg font-semibold text-gray-900">&#x20B9; {g.price}</p>
-                <p className="text-base font-medium text-gray-800">{g.seats}</p>
-                <a href={g.link} target="_blank" rel="noopener noreferrer" className="w-full mt-2">
-                  <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-base py-2 rounded-lg font-semibold transition">Join Now</button>
-                </a>
+
+        {/* Platinum Plan */}
+        <div className="relative">
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl shadow-xl p-8 relative overflow-hidden border-2 border-purple-500">
+            {/* Most Popular Badge */}
+            <div className="absolute top-1 left-1/2 transform -translate-x-1/2">
+              <div className="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold">
+                MOST POPULAR
               </div>
-            ))}
+            </div>
+            
+            {/* Discount Badge */}
+            <div className="absolute top-0 right-0 bg-red-500 text-white px-4 py-2 rounded-bl-2xl font-bold text-sm">
+              50% OFF
+            </div>
+            
+            <div className="text-center mt-4">
+              {/* Plan Header */}
+              <h3 className="text-2xl font-bold mb-2">Platinum Plan</h3>
+              <div className="mb-6">
+                <span className="text-lg text-red-400 line-through">₹19,999</span>
+                <div className="text-4xl font-bold text-purple-400 mt-2">₹9,999</div>
+                <p className="text-gray-300 mt-1">till NEET 2026</p>
+                <p className="text-sm text-green-400 font-semibold mt-2">Save ₹10,000!</p>
+              </div>
+              
+              {/* Features */}
+              <div className="space-y-3 mb-8 text-left">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-purple-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <span className="text-gray-300">Access till NEET 2026</span>
+                </div>
+               
+              </div>
+              
+              <p className="text-sm text-orange-400 font-semibold mb-6">Limited Seats Available</p>
+              
+              <a href="https://rzp.io/rzp/DINd1zvp" target="_blank" rel="noopener noreferrer" className="block">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg hover:shadow-xl">
+                  Enroll Now
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      
-    <motion.h1
+
+      {/* Bottom Section */}
+      <motion.div className="max-w-4xl mx-auto text-center mt-20"
           variants={fadeIn("up", 0.02)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-     className='md:px-20 px-4 py-5  text-lg text-justify md:text-center '>"Believe in your potential and embrace challenges as opportunities to grow. Your dedication, hard work, and perseverance will pave the way to success. Remember, every small step forward brings you closer to achieving your dreams."</motion.h1>
-         <h2 className='px-5 text-xl text-center py-4 font-semibold'>Best Of Luck For Your Future !</h2>
-      </div>
+      >
+        <p className="text-lg text-gray-300 mb-6 italic">
+          "Believe in your potential and embrace challenges as opportunities to grow. Your dedication, hard work, and perseverance will pave the way to success. Remember, every small step forward brings you closer to achieving your dreams."
+        </p>
+        <h2 className="text-2xl font-bold text-yellow-400">Best Of Luck For Your Future!</h2>
+      </motion.div>
+    </div>
     </>
   );
 };
