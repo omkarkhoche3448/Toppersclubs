@@ -46,16 +46,16 @@ const MentorshipCards = () => (
             dynamicBullets: true,
           }}
           modules={[Autoplay, Pagination]}
-          className="mentorshipSwiper !pb-12"
+          className="mentorshipSwiper !pb-12 bg-none"
         >
           {mentorshipCards.map((item, idx) => (
             <SwiperSlide key={idx} className="!h-auto">
-              <div className="bg-gradient-to-br from-[#1e1f36] to-[#252641] rounded-2xl shadow-2xl border border-[#3a3b5c] overflow-hidden hover:scale-105 hover:shadow-yellow-400/20 hover:shadow-2xl transition-all duration-300 group mx-2">
-                <div className="w-full aspect-[16/10] flex items-center justify-center p-4">
+              <div className="rounded-2xl overflow-hidden mx-2">
+                <div className="w-full aspect-[16/10] flex items-center justify-center">
                   <img
                     src={item.img}
                     alt={`Mentorship Program ${idx + 1}`}
-                    className="object-contain w-full h-full rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain w-full h-full rounded-xl"
                   />
                 </div>
               </div>

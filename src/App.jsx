@@ -9,6 +9,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import { MdClose } from "react-icons/md";
 import Mentors from "./pages/Mentors";
 
+import MentorshipCards from "./components/MentorshipCards";
+
 
 // import img2 from "./assets/mentor_img2.jpeg";
 import img2 from "./assets/2025Newbanner.jpg";
@@ -63,6 +65,7 @@ const App = () => {
         <Home2 />
         <Features />
         <Mentors/>
+        <MentorshipCards />
         {/* <Mentors_3d /> */}
         <Batches />
         <Contact />
