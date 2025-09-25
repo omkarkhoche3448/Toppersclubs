@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home2 from "./pages/Home2";
 import Features from "./pages/Features";
@@ -8,9 +9,10 @@ import Mentors_3d from "./pages/Mentors_3d";
 import WhatsAppButton from "./components/WhatsAppButton";
 import { MdClose } from "react-icons/md";
 import Mentors from "./pages/Mentors";
-
 import MentorshipCards from "./components/MentorshipCards";
-
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import RefundPolicy from "./pages/RefundPolicy";
 
 // import img2 from "./assets/mentor_img2.jpeg";
 import img2 from "./assets/2025Newbanner.jpg";
@@ -31,14 +33,13 @@ const Modal = ({ onClose }) => {
           <h2 className="md:text-3xl text-2xl font-medium text-center">Get Mentorship From <br /> <span className="font-semibold">MBBS Toppers</span> <br /> AIR-1 </h2>
           <h3 className="text-lg">On TopperClubs</h3>
           <button onClick={onClose} className="text-xl text-blue-50 px-2 py-1 rounded-lg bg-indigo-500"><a href="#batches">Limited Seats Join Now !</a></button>
-
         </div>
       </div>
     </div>
   );
 };
 
-const App = () => {
+const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -60,19 +61,30 @@ const App = () => {
 
   return (
     <>
+      <Home2 />
+      <Features />
+      <Mentors/>
+      <MentorshipCards />
+      {/* <Mentors_3d /> */}
+      <Batches />
+      <Contact />
+      {showModal && <Modal onClose={closeModal} />}
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <>
       <div className="bg-[#040517]">
         <Navbar />
-        <Home2 />
-        <Features />
-        <Mentors/>
-        <MentorshipCards />
-        {/* <Mentors_3d /> */}
-        <Batches />
-        <Contact />
-
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsAndConditions />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+        </Routes>
       </div>
-
-      {showModal && <Modal onClose={closeModal} />}
 
       <div className="fixed z-10 bottom-5 right-6">
         <WhatsAppButton />
